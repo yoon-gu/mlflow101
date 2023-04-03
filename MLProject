@@ -1,0 +1,8 @@
+name: mlflow pipeline
+conda_env: mlflow.yaml
+entry_points:
+  main:
+    parameters:
+      in_data: {type: str, default: input.csv}
+      out_data: {type: str, default: out_data_01.csv}
+    command: "python main01.py {in_data} {out_data}"
